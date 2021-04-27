@@ -1,0 +1,40 @@
+<body>
+    <div class="login-box">
+        <h2>ADMIN LOGIN</h2>
+        <form #loginForm="ngForm" (ngSubmit)="loginAdmin()">
+            <!-- checkLogin(loginForm) -->
+            <div class="user-box">
+                <input type="text" name="adminId" required [(ngModel)]="loginadmin.adminId">
+                <label for="adminId"><b>Admin ID</b></label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="adminPassword" required [(ngModel)]="loginadmin.adminPassword">
+                <label for="adminPassword"><b>Password</b></label>
+            </div>
+
+            <button type="submit" value="submit" [disabled]="loginForm.form.invalid">Submit</button>
+
+            <!-- <button type="submit">Submit</button> -->
+
+            <!-- <a routerLink="/adminDash">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Submit
+            </a> -->
+
+            <!-- <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label> -->
+
+            <!-- <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div> -->
+
+            <!-- <div class="forgot-password" >
+                <a [routerLink]="['/forgetpasswordLink']">Forget Password?</a>
+            </div> -->
+        </form>
+    </div>
+</body>

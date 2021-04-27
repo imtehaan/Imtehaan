@@ -1,0 +1,103 @@
+<!-- <form (ngSubmit)="allsubmit()"> 
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>QuestionId</label>
+                    <input type="number" class="form-control" [(ngModel)]="remove-question.questionId" name="questionId"> 
+            </div>
+            <button class="btna">{{title}}</button>
+        </div>
+    </div> 
+ </form>
+<br/>
+<table border="1" align="center" class="table-bordered">
+    <tr>
+        <td>Question</td>
+        <td>Option1</td>
+        <td>Option2</td>
+        <td>Option3</td>
+        <td>Correct Option</td>
+        <td>Delete</td>
+    </tr>
+    <tr *ngFor="Let Object Of Data;Let j=index">
+        <td>{{obj.question_text}}</td>
+        <td>{{obj.correct_option}}</td>
+        <td>{{obj.option1}}</td>
+        <td>{{obj.option2}}</td>
+        <td>{{obj.option3}}</td>
+        <td><a class="btn btn-sm text-white btn-danger" (click)="delete(obj.questionId)">Delete</a></tr>
+ 
+  
+</table> -->
+
+<!-- <div class="topnav">
+    <ul>
+        <div id="hiadmin">
+            <li><a class="active" href="#Hello,Admin">Hello, Admin</a></li>
+        </div>
+
+        <div id="rightside">
+            <li><a href="">Logout</a></li>
+        </div>
+        <li> <img src="../assets/images/homeimg.jpg"
+                style="float: center;height: 50px;margin-left: 17%;width: 400px;" />
+        </li> 
+    </ul>
+</div>-->
+
+<div class="topnav">
+    <ul>
+        <div id="hiadmin">
+            <li><a class="active" routerLink="/adminDash">Hello, Admin</a></li>
+        </div>
+
+        <div id="rightside">
+            <li><a routerLink="/adminLogin">Logout</a></li>
+        </div>
+
+    </ul>
+</div>
+
+<!--id="ci" #ci="ngModel"    id="cl" #cl="ngModel"   [disabled]="myForm.form.invalid"-->
+
+<div class="column">
+    <label style="font-size: 25px; color: rgb(21, 34, 7);" for="courseName">Course_Id: </label><input
+        style="border-radius: 3px;" type="number" [(ngModel)]="courseId"><br><br>
+    <label style="font-size: 25px; color: rgb(21, 34, 7);" for="courseLevel">Course Level: </label><input
+        style="border-radius: 3px;" type="number" [(ngModel)]="courseLevel"><br><br>
+    <button
+        style="border-radius: 3px;background-color: #3bbbd1 ; color: white; height: 30px; width: 10%; font-size: 15px;"
+        class="btn" (click)="getQuestions()">Submit</button><br><br>
+</div>
+<div class="shruti">
+    <form #myForm=ngForm>
+        <table class="table-bordered" style="background-color:whitesmoke;">
+
+            <tr>
+                <td style="color: white; background-color:#3bbbd1 ;text-align: center;font-size: 25px;"><b>Question</b>
+                </td>
+                <td style="color: white; background-color: #3bbbd1; text-align: center;font-size: 25px;"><b>Option1</b>
+                </td>
+                <td style="color: white; background-color:#3bbbd1;text-align: center;font-size: 25px;"><b>Option2</b>
+                </td>
+                <td style="color: white; background-color:#3bbbd1;text-align: center;font-size: 25px;"><b>Option3</b>
+                </td>
+                <td style="color: white; background-color: #3bbbd1;text-align: center;font-size: 25px;"><b>Correct
+                        Option</b></td>
+                <td style="color:lightcoral; background-color: #3bbbd1;font-size: 25px;"><b>Delete</b></td>
+            </tr>
+
+            <tr *ngFor="let Question Of questions;">
+                <td>{{Question.questionText}}</td>
+                <td>{{Question.correctOption}}</td>
+                <td>{{Question.option1}}</td>
+                <td>{{Question.option2}}</td>
+                <td>{{Question.option3}}</td>
+                <td><button style="background-color:red;" class="btn btn-sm text-white btn-danger"
+                        (click)="delete(Question.questionId)">Delete</button>
+            </tr>
+
+        </table>
+    </form>
+
+</div>

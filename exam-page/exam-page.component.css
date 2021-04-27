@@ -1,0 +1,196 @@
+ /* .parent-box{
+    display: flex;
+}
+.nums{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+* {
+    box-sizing: border-box;
+ }
+ 
+ body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+ }
+ 
+a {
+   color: white;
+   font-weight: 300;
+   letter-spacing: 2px;
+   text-decoration: none;
+   background: rgb(20, 127, 199);
+   padding: 20px 5px;
+   display: inline-block;
+   width: 100%;
+   text-align: center;
+}
+ 
+a:hover {
+   background: rgba(13, 238, 208, 0.75);
+}
+ 
+.main {
+   max-width: 2400px;
+   margin: 0 auto;
+   padding: 3 3em 1.5em;
+  justify-content: space-around;
+}
+ 
+.navigation{
+   justify-content: space-between;
+   flex-basis: 10%;
+}
+ 
+.navigation ul {
+   border: 1px solid rgb(13, 221, 186);
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+ 
+.navigation li {
+   flex: 3; 
+   font-size:large ;   
+}
+ 
+.navigation .user {
+   flex: 1;
+}
+ 
+@media all and (max-width: 1000px) {
+   .navigation ul {
+      flex-wrap: wrap;
+   }
+   
+   .navigation li {
+      flex: 1 1 50%;
+   }
+ 
+}
+ 
+@media all and (max-width: 480px) {
+   .navigation li {
+      flex-basis: 100%;
+   }
+}
+ 
+ .navigation2{
+   display: flex;
+ 
+}
+.navigation2 .column {
+   flex-direction: column;
+   justify-content: space-around;
+   height: 100%;
+   width: 100%;
+   background-color: aqua;
+   flex-basis: 60%;
+   flex-basis: 47%;
+   flex-wrap: wrap;
+   
+}
+
+
+#question-div{
+    height: 350px;
+    width:705px; 
+    background-color: aqua;
+    margin-right: 5px;
+    margin-top: 70px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+    padding: 50px;
+    text-align: justify;
+}
+ 
+.name{
+    display:none;
+}
+ 
+.selected{
+    display: block;
+}
+
+.question-name{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.content{
+   display: inline;
+ 
+}
+.qno{
+   display: flex;
+   justify-content: space-around;
+}
+.qno div{
+   margin: 4px;
+}
+
+.example-radio-group {
+   display: flex;
+   flex-direction: column;
+   margin: 15px 0;
+ }
+ 
+ .example-radio-button {
+   margin: 5px;
+ }
+
+ .question-number{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-around;
+    width: 47%;
+    height: 7%;
+    
+ }
+
+ .question-box{
+   /* height: 30px;*/
+   width: 20px;
+   padding: 1rem;
+   background-color: chartreuse;
+   color: red;
+   margin-left: 10px;
+ }
+
+ .submit-box{
+    margin: auto;
+    margin-top: 80px;
+    margin-left: 30px;
+ }
+
+ .main-exam{
+    display: flex;
+ }
+
+ .ashish{
+    margin-left: 50px;
+    height: 20px;
+    width: auto;
+    margin-top: 20px;
+
+ }
+
+ .reviewQuestion{
+   width: 20px;
+   padding: 1rem;
+   background-color: yellow;
+   color: red;
+   margin-left: 10px;
+ }
+ 

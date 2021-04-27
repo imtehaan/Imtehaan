@@ -1,0 +1,159 @@
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row {
+	display: flex;
+}
+
+.column {
+	flex: 50%;
+	background-color: white;
+  margin-top: 7%;
+  margin-left: 4%;
+}
+
+table{
+	table-layout: fixed;
+	margin-top: 30px;
+	height: 500px; 
+	text-align: center;
+	background: grey;
+	box-shadow: 0 15px 25px rgba(18, 163, 144, 0.849);
+	color: white;
+	width: 700px;
+	position: absolute;
+}
+
+#show th, #show td{
+	padding: 25px;
+	overflow-x: scroll;
+}
+
+#btna td input{
+	width: 30%;
+	align-items: center;
+	height:60px;
+}
+.desc{
+	height: 100px ;
+	width: 500px;
+}
+.option{
+	height: 50px;
+	width:500px
+}
+
+/*#abc{
+	
+}*/
+
+/* Add a black background color to the top navigation */
+/* .topnav {
+  background-color: #E6E6FA;
+  overflow: hidden;
+} */
+
+/* Style the links inside the navigation bar */
+/* .topnav a {
+  float: left;
+  color: #800080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+} */
+
+/* Change the color of links on hover */
+/* .topnav a:hover {
+  background-color: #B0E0E6;
+  color: black;
+} */
+
+/* Add a color to the active/current link */
+/* .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+} */
+
+
+ /*navbar*/
+
+ .topnav {
+    background-color: whitesmoke;
+    overflow: hidden;
+    height: 100px;
+    width:100%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-basis: 20%;
+    /* border: 1px; */
+    }
+
+   #hiadmin {
+    float: left;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px;
+    text-decoration: none; 
+    letter-spacing: 1px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin: 10px;
+    }
+
+   #rightside {
+    margin-top: 20px;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none; 
+    letter-spacing: 1px;
+    height: 70px;
+    font-size: 20px;
+    }
+
+    .topnav a {
+      color: black;
+    }
+
+    .topnav a:hover {
+      background-color: whitesmoke;
+      color: rgba(18, 163, 144, 0.849);
+    }
+    
+    .topnav a.active {
+      background-color: whitesmoke;
+      color: rgba(18, 163, 144, 0.849);
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: right;
+      }
+    }
+    

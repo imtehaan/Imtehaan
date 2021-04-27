@@ -1,0 +1,71 @@
+
+<body>
+    <div class="login-box">
+        <h2>REGISTER</h2>
+        <form #myForm=ngForm (ngSubmit)="register()">
+            <!--    pattern="^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$" -->
+            <div class="user-box">
+                <input type="text" id="nm" #nm="ngModel" name="studentName" required [(ngModel)]="user.studentName">
+                <label for="studentName"><b>Name</b></label>
+                <div *ngIf="nm.invalid && (nm.dirty || nm.touched)" style="color: red;border-color: red;">
+                    Name is required
+                </div>
+            </div>
+            <div class="user-box">
+                <input type="email" id="em" #em="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                name="studentEmail" required [(ngModel)]="user.studentEmail">
+                <label for="studentEmail"><b>E-mail ID</b></label>
+                <div *ngIf="em.invalid && (em.dirty || em.touched)" style="color: red;border-color: red;">
+                    <div *ngIf="em.errors.required">Email is required</div>
+                    <div *ngIf="em.errors.pattern">Email is invalid</div>
+                </div>
+            </div>
+            <div class="user-box">
+                <input type="tel" id="mb" #mb="ngModel" pattern="^[6-9]\d{9}$" name="studentPhone" 
+                required [(ngModel)]="user.studentPhone">
+                <label for="studentPhone"><b>Mobile Number</b></label>
+                <div *ngIf="mb.invalid && (mb.dirty || mb.touched)" style="color: red;border-color: red;">
+                    <div *ngIf="mb.errors.required">Mobile no. is required</div>
+                    <div *ngIf="mb.errors.pattern">Mobile no. is invalid</div>
+                </div>
+            </div>
+            <div class="user-box">
+                <input type="number" id="age" #age="ngModel" name="age" required [(ngModel)]="user.age">
+                <label for="age"><b>Age</b></label>
+                <div *ngIf="(age.dirty || age.touched)" style="color: red;border-color: red;">
+                    <!-- <div *ngIf="age.errors.required">Age is required</div> -->
+                    <!-- <div *ngIf="age.errors.pattern">Age is invalid</div> -->
+                </div>
+            </div>
+            <div class="user-box">
+                <input type="password" id="pwd" #pwd="ngModel" minlength="8"  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                name="studentPassword" required [(ngModel)]="user.studentPassword">
+                <label for="studentPassword"><b>Password</b></label>
+                <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)" style="color: red;border-color: red;">
+                    <div *ngIf="pwd.errors.required">Password is required</div>
+                    <div *ngIf="pwd.errors.pattern">Password is invalid</div>
+                </div>
+            </div>
+            
+            <!-- <div class="user-box">
+                <input type="password" id="pwd1" #pwd1="ngModel" minlength="8"  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                name="studentPassword" required [(ngModel)]="user.studentPassword">
+                <label for="studentPassword"><b> Confirm Password</b></label>
+                <div *ngIf="pwd1.invalid && (pwd1.dirty || pwd1.touched)" style="color: red;border-color: red;">
+                    <div *ngIf="pwd1.errors.required">Password is required</div>
+                    <div *ngIf="pwd1.errors.pattern">Password is invalid</div>
+                </div>
+            </div> -->
+
+            <button type="submit" value="submit" [disabled]="myForm.form.invalid">Register</button>
+
+            <!-- <button type="submit">Submit</button> -->
+            <!-- <a routerLink="/userDash">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Submit
+            </a> -->
+        </form>
+    </div>
+</body>

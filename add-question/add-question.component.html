@@ -1,0 +1,176 @@
+<!-- <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Imtehaan</label>
+    <ul>
+      <li><a class="active" href="#" button="homebutton">Home</a></li>
+      <li><a href="#">About</a></li>
+
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#"><button="adminlogin">Admin Login</button></a></li>
+    </ul>
+  </nav> -->
+
+	<!-- <div class="topnav">
+	  <a class="active" href="home-page.html">Home</a>
+	  <a href="#">Logout</a>
+	</div> -->
+
+	<div class="topnav">
+		<ul>
+			<div id="hiadmin">
+				<li><a class="active" href="#Hello,Admin">Hello, Admin</a></li>
+			</div>
+	
+			<div id="rightside">
+				<li><a href="">Logout</a></li>
+			</div>
+			<!-- <li> <img
+						src="../assets/images/homeimg.jpg"
+						style="float: center;height: 50px;margin-left: 17%;width: 400px;" />
+					</li> -->
+		</ul>
+	</div>
+	<form #myForm=ngForm (ngSubmit)="addquestion(myForm)">
+	
+		<div class="row">
+	
+			<div class="column">
+				<label for="courseName">CourseId: </label><input type="number" #ci=ngModel name="ci" [(ngModel)]="courseId"><br><br>
+				<label for="courseLevel">Course Level: </label><input type="number" #cl=ngModel name="cl" [(ngModel)]="courseLevel">
+			</div>
+	
+			<div class="column">
+				<table border="4">
+					<thead>
+						<tr>
+							<th style="font-size: 25px;width:100px">Question Description</th>
+							<td style="height:50px; width: 300px; column-width:400px"><input class="desc" type="text"
+									name="question" id="question" [(ngModel)]="questionText"></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="font-size: 18px;width:100px">Option 1</th>
+							<td style="height:50px; width: 600px;"><input class="option" type="text" name="opt1" id="opt1"
+									[(ngModel)]="opt1"></td>
+						</tr>
+						<tr>
+							<th style="font-size: 18px;width:100px">Option 2</th>
+							<td style="height:50px; width: 600px;"><input class="option" type="text" name="opt2" id="opt2"
+									[(ngModel)]="opt2"></td>
+						</tr>
+						<tr>
+							<th style="font-size: 18px;width:100px">Option 3</th>
+							<td style="height:50px; width: 600px;"><input class="option" type="text" name="opt3" id="opt3"
+									[(ngModel)]="opt3"></td>
+						</tr>
+						<!-- <tr>
+							<th style="font-size: 18px;width:100px">Option 4</th>
+							<td style="height:50px; width: 600px;" ><input class="option" type="text" name="op4" id="op4"></td>
+						</tr> -->
+						<tr>
+							<th style="font-size: 18px;width:100px">Correct Option</th>
+							<td style="height:50px; width: 600px;"><input class="option" type="text" name="corrop"
+									id="corrop" [(ngModel)]="corrop"></td>
+						</tr>
+						<tr id="btna">
+							<td colspan="2"><input type="submit" name="button" id="btn" value="Add Question"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	
+			<!-- <div class="column">
+				<table border="4" id="show">
+					<div id="abc">
+					<thead>
+						<tr>
+							<th>Question Description</th>
+							<th>Option1</th>
+							<th>Option2</th>
+							<th>Option3</th>
+							<th>Option4</th> -->
+			<!-- <th>Correct Option</th> -->
+	
+			<!--</tr>
+					</thead>
+				</div>
+				</table>
+			</div> -->
+	
+		</div>
+	</form>
+
+		<!-- <div class="column">
+			<table border="4" id="show">
+				<div id="abc">
+				<thead>
+					<tr>
+						<th>Question Description</th>
+						<th>Option1</th>
+						<th>Option2</th>
+						<th>Option3</th>
+						<th>Option4</th> -->
+						<!-- <th>Correct Option</th> -->
+
+					<!--</tr>
+				</thead>
+			</div>
+			</table>
+		</div> -->
+
+	
+
+	
+	
+	<!-- <script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+		var list5 = [];
+		var list6 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("qname").value;
+			list2[x] = document.getElementById("op1").value;
+			list3[x] = document.getElementById("op2").value;
+			list4[x] = document.getElementById("op3").value;
+			list5[x] = document.getElementById("op4").value;
+			list6[x] = document.getElementById("corrop").value;
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+			var cel5 = NewRow.insertCell(4);
+			var cel6 = NewRow.insertCell(5);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+			cel5.innerHTML = list5[x];
+			cel6.innerHTML = list6[x];
+
+			n++;
+			x++;
+		}
+
+	</script>-->
+<!-- </body>
+</html> -->
+
+<!--Add reset button on the left side, add scrollbar on the right side  -->
